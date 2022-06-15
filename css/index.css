@@ -1,0 +1,153 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: montserrat;
+}
+
+.topofixo{
+    position: fixed;
+    width: 100%;
+}
+.principal {
+    background-color: white;
+    height: 6vw;
+	font-weight: bold;
+    padding: 1%;
+    text-align: center;
+}
+
+label.logotext {
+	font-size: 4vw;  
+    margin-left: 0.5%;
+}
+
+.rodape {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+
+nav.menu {
+	background: black;
+	height: 5vw;
+	width: 100%;
+}
+nav.menu ul {
+	float: right;
+	margin-right: 1%;
+}
+nav.menu ul ul {
+    display: grid;
+	position: fixed;
+    visibility: hidden;
+}
+
+nav.menu ul li {
+	display: inline-block;
+	line-height: 5vw;
+}
+nav.menu ul li:hover ul {
+    visibility: visible;
+}
+nav.menu a {
+    display: block;
+	color: white;
+	font-size: 1.8vw;
+	padding: 0px 15px;
+}
+nav.menu a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	transition: .3s;
+}
+
+section{
+    padding-top: 11vmax;
+}
+
+label[for="check_menu"] {
+    padding: 2px;
+    background-color: black;
+    color: white;
+    font-family: "Arial";
+    text-align: center;
+    font-size: 3vw;
+    cursor: pointer;
+    width: 3vw;
+    height: 3vw;
+}
+
+#check_menu{
+    display: none;
+}
+
+label[for="check_menu"] {
+    display: none;
+}
+
+@media(max-width: 600px) {
+
+    label[for="check_menu"] {
+        display: block;
+    }
+
+    nav.menu a {
+        font-size: 3vw;
+        padding: 5px 15px;
+    }
+
+    nav.menu ul {
+        line-height: 3vw;
+        margin-right: 55%;
+        text-align: center;
+        position: fixed;
+        margin-left: -5px;
+        margin-top: 2%;
+        transition: all .3s linear;
+    }
+    nav.menu ul li {
+        width: 100%;
+        float: none;
+        background: black;
+        opacity: 85%;
+    }
+    nav.menu ul ul {  
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .3s;
+    }
+    nav.menu ul li:hover ul {
+        height: auto;
+        max-height: 250px;
+        margin-right: 5%;
+    }
+
+    #check_menu:checked ~ div nav.menu ul {     
+        margin-left: -350%;
+        transition: all .0s;
+    }
+
+    section {
+        padding-top: 10vw;
+        transition: all .3s;
+    }
+    /* 
+    #check_menu:checked ~ section {      
+        padding-top: 120px;
+    } */
+
+  }
+
+/* .rodape{
+    position: fixed;
+    background: black;
+    height: 100%;
+    width: 100%;
+} */
